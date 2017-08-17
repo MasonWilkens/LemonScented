@@ -63,7 +63,7 @@ public class BattleSimulation : MonoBehaviour {
 			user=null;
 			target=null;
 		}
-
+			
 		/// <summary>
 		/// Be sure to have Move.instance set to the correct move for user
 		/// ActionType range
