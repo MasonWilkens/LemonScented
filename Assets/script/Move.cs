@@ -30,7 +30,6 @@ public class Move : MonoBehaviour {
 	private string description;
 	private bool secondEffect;
 
-
 	/// <summary>
 	///  0=single target opp
 	/// 1=single target self
@@ -54,7 +53,7 @@ public class Move : MonoBehaviour {
 	/// 9=jumpkickMissDamage
 	/// 10=selfStatusOnConnectAfterAttack
 	/// </summary>
-	private int attackMethod;
+	private AttackMethodEnum attackMethod;
 
 	/// <summary>
 	/// The addition effect.
@@ -127,7 +126,7 @@ public class Move : MonoBehaviour {
 		visaName = "Nothing";
 		description = "";
 		targetSystem = 0;
-		attackMethod = 0;
+		attackMethod = AttackMethodEnum.basicAttack;
 		secondEffect = false;
 		genericUserEffector (null,0,0,0);
 	}
@@ -149,7 +148,7 @@ public class Move : MonoBehaviour {
 			visaName = "Pound";
 			description = "The target is physically pounded with a long tail, a foreleg, or the like.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 2) {
@@ -164,7 +163,7 @@ public class Move : MonoBehaviour {
 			visaName = "Karate Chop";
 			description = "The target is attacked with a sharp chop. Critical hits land more easily.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.CRITUP1,0,0);
 		}
 		else if (numberID == 3) {
@@ -180,7 +179,7 @@ public class Move : MonoBehaviour {
 			visaName = "Double Slap";
 			description = "The target is slapped repeatedly, back and forth, two to five times in a row.";
 			targetSystem = 0;
-			attackMethod = 1;
+			attackMethod = AttackMethodEnum.multiAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 
 		}
@@ -197,7 +196,7 @@ public class Move : MonoBehaviour {
 			visaName = "Comet Punch";
 			description = "The target is hit with a flurry of punches that strike two to five times in a row.";
 			targetSystem = 0;
-			attackMethod = 1;
+			attackMethod = AttackMethodEnum.multiAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 5) {
@@ -213,7 +212,7 @@ public class Move : MonoBehaviour {
 			visaName = "Mega Punch";
 			description = "The target is slugged by a punch thrown with muscle-packed power.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 6) {
@@ -229,7 +228,7 @@ public class Move : MonoBehaviour {
 			visaName = "Pay Day";
 			description = "Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 7) {
@@ -244,7 +243,7 @@ public class Move : MonoBehaviour {
 			visaName = "Fire Punch";
 			description = "The target is punched with a fiery fist. This may also leave the target with a burn.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.BURN,50,1);
 		}
 		else if (numberID == 8) {
@@ -259,7 +258,7 @@ public class Move : MonoBehaviour {
 			visaName = "Ice Punch";
 			description = "The target is punched with an icy fist. This may also leave the target frozen.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.FREEZE,50,1);
 		}
 		else if (numberID == 9) {
@@ -274,7 +273,7 @@ public class Move : MonoBehaviour {
 			visaName = "Thunder Punch";
 			description = "The target is punched with an electrified fist. This may also leave the target with paralysis.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.PARA,50,1);
 		}
 		else if (numberID == 10) {
@@ -289,7 +288,7 @@ public class Move : MonoBehaviour {
 			visaName = "Scratch";
 			description = "Hard, pointed, sharp claws rake the target to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 11) {
@@ -304,7 +303,7 @@ public class Move : MonoBehaviour {
 			visaName = "Vice Grip";
 			description = "The target is gripped and squeezed from both sides to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 12) {
@@ -319,7 +318,7 @@ public class Move : MonoBehaviour {
 			visaName = "Guillotine";
 			description = "A vicious, tearing attack with big pincers. The target faints instantly if this attack hits.";
 			targetSystem = 0;
-			attackMethod = 4;
+			attackMethod = AttackMethodEnum.OHKO;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 13) { 
@@ -334,7 +333,7 @@ public class Move : MonoBehaviour {
 			visaName = "Razor Wind";
 			description = "In this two-turn attack, blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily.";
 			targetSystem = 0;
-			attackMethod = 6;
+			attackMethod = AttackMethodEnum.chargeAttack;
 			genericUserEffector (go,EffEnum.CRITUP1,0,0);
 		}
 		else if (numberID == 14) {
@@ -349,7 +348,7 @@ public class Move : MonoBehaviour {
 			visaName = "Swords Dance";
 			description = "A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat.";
 			targetSystem = 1;
-			attackMethod = 3;
+			attackMethod = AttackMethodEnum.selfStatus;
 			genericUserEffector (go,EffEnum.STATATT,100,4);
 		}
 		else if (numberID == 15) {
@@ -364,7 +363,7 @@ public class Move : MonoBehaviour {
 			visaName = "Cut";
 			description = "The target is cut with a scythe or claw.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 16) {
@@ -379,7 +378,7 @@ public class Move : MonoBehaviour {
 			visaName = "Gust";
 			description = "A gust of wind is whipped up by wings and launched at the target to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 17) {
@@ -394,7 +393,7 @@ public class Move : MonoBehaviour {
 			visaName = "Wing Attack";
 			description = "The target is struck with large, imposing wings spread wide to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 18) {
@@ -409,7 +408,7 @@ public class Move : MonoBehaviour {
 			visaName = "Whirlwind";
 			description = "The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.";
 			targetSystem = 0;
-			attackMethod = 7;
+			attackMethod = AttackMethodEnum.forceWithdrawMove;
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
 		}
 		else if (numberID == 19) {
@@ -424,7 +423,7 @@ public class Move : MonoBehaviour {
 			visaName = "Fly";
 			description = "The user soars and then strikes its target on the next turn.";
 			targetSystem = 0;
-			attackMethod = 8;
+			attackMethod = AttackMethodEnum.chargeAttackFirstTurnSelfStatus;
 			genericUserEffector (go,EffEnum.FLIGHT,0,0);
 		}
 		else if (numberID == 20) {
@@ -439,7 +438,7 @@ public class Move : MonoBehaviour {
 			visaName = "Bind";
 			description = "Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 21) {
@@ -454,7 +453,7 @@ public class Move : MonoBehaviour {
 			visaName = "Slam";
 			description = "The target is slammed with a long tail, vines, or the like to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 22) {
@@ -469,7 +468,7 @@ public class Move : MonoBehaviour {
 			visaName = "Vine Whip";
 			description = "The target is struck with slender, whiplike vines to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 23) {
@@ -484,7 +483,7 @@ public class Move : MonoBehaviour {
 			visaName = "Stomp";
 			description = "The target is stomped with a big foot. This may also make the target flinch.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 24) {
@@ -499,7 +498,7 @@ public class Move : MonoBehaviour {
 			visaName = "Double Kick";
 			description = "The target is quickly kicked twice in succession using both feet.";
 			targetSystem = 0;
-			attackMethod = 2;
+			attackMethod = AttackMethodEnum.doubleAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 25) {
@@ -514,7 +513,7 @@ public class Move : MonoBehaviour {
 			visaName = "Mega Kick";
 			description = "The target is attacked by a kick launched with muscle-packed power.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 26) {
@@ -529,7 +528,7 @@ public class Move : MonoBehaviour {
 			visaName = "Jump Kick";
 			description = "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.";
 			targetSystem = 0;
-			attackMethod = 9;
+			attackMethod = AttackMethodEnum.jumpkickMissDamage;
 			genericUserEffector (go,EffEnum.NONE,0,0,EffEnum.CRASHDAMAGEHALF,0,0);
 			secondEffect = true;
 		}
@@ -545,7 +544,7 @@ public class Move : MonoBehaviour {
 			visaName = "Rolling Kick";
 			description = "The user lashes out with a quick, spinning kick. This may also make the target flinch.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 28) {
@@ -560,7 +559,7 @@ public class Move : MonoBehaviour {
 			visaName = "Sand Attack";
 			description = "Sand is hurled in the target's face, reducing the target's accuracy.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.STATACC,100,-2);
 		}
 		else if (numberID == 29) {
@@ -575,7 +574,7 @@ public class Move : MonoBehaviour {
 			visaName = "Headbutt";
 			description = "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 30) {
@@ -590,7 +589,7 @@ public class Move : MonoBehaviour {
 			visaName = "Horn Attack";
 			description = "The target is jabbed with a sharply pointed horn to inflict damage.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 31) {
@@ -605,7 +604,7 @@ public class Move : MonoBehaviour {
 			visaName = "Fury Attack";
 			description = "The target is jabbed repeatedly with a horn or beak two to five times in a row.";
 			targetSystem = 0;
-			attackMethod = 1;
+			attackMethod = AttackMethodEnum.multiAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 32) {
@@ -620,7 +619,7 @@ public class Move : MonoBehaviour {
 			visaName = "Horn Drill";
 			description = "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.";
 			targetSystem = 0;
-			attackMethod = 4;
+			attackMethod = AttackMethodEnum.OHKO;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 33) {
@@ -635,7 +634,7 @@ public class Move : MonoBehaviour {
 			visaName = "Tackle";
 			description = "A physical attack in which the user charges and slams into the target with its whole body.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 34) {
@@ -650,7 +649,7 @@ public class Move : MonoBehaviour {
 			visaName = "Body Slam";
 			description = "The user drops onto the target with its full body weight. This may also leave the target with paralysis.";
 			targetSystem = 0;
-			attackMethod = 0; 
+			attackMethod = AttackMethodEnum.basicAttack; 
 			genericUserEffector (go,EffEnum.PARA,75,1);
 		}
 		else if (numberID == 35) {
@@ -665,7 +664,7 @@ public class Move : MonoBehaviour {
 			visaName = "Wrap";
 			description = "A long body, vines, or the like are used to wrap and squeeze the target for four to five turns.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 36) {
@@ -695,7 +694,7 @@ public class Move : MonoBehaviour {
 			visaName = "Thrash";//TODO code attackMethod and frenzy mechanic
 			description = "The user rampages and attacks for two to three turns. The user then becomes confused.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 38) {
@@ -710,7 +709,7 @@ public class Move : MonoBehaviour {
 			visaName = "Double-Edge";
 			description = "A reckless, life-risking tackle. This also damages the user quite a lot.";
 			targetSystem = 0;
-			attackMethod = 10;
+			attackMethod = AttackMethodEnum.selfStatusOnConnectAfterAttack;
 			genericUserEffector (go,EffEnum.RECOILTHIRD,0,0);
 		}
 		else if (numberID == 39) {
@@ -725,7 +724,7 @@ public class Move : MonoBehaviour {
 			visaName = "Tail Whip";
 			description = "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.STATDEF,100,-2);
 
 		}
@@ -741,7 +740,7 @@ public class Move : MonoBehaviour {
 			visaName = "Poison Sting";
 			description = "The user stabs the target with a poisonous stinger. This may also poison the target.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.POISON,100,1);
 		}
 		else if (numberID == 41) {
@@ -756,7 +755,7 @@ public class Move : MonoBehaviour {
 			visaName = "Twineedle";
 			description = "The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.";
 			targetSystem = 0;
-			attackMethod = 2;
+			attackMethod = AttackMethodEnum.doubleAttack;
 			genericUserEffector (go, EffEnum.POISON, 50, 1);
 		}
 		else if (numberID == 42) {
@@ -771,7 +770,7 @@ public class Move : MonoBehaviour {
 			visaName = "Pin Missile";
 			description = "Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.";
 			targetSystem = 0;
-			attackMethod = 1;
+			attackMethod = AttackMethodEnum.multiAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 43) {
@@ -786,7 +785,7 @@ public class Move : MonoBehaviour {
 			visaName = "Leer";
 			description = "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.STATDEF,100,-2);
 		}
 		else if (numberID == 44) {
@@ -801,7 +800,7 @@ public class Move : MonoBehaviour {
 			visaName = "Bite";
 			description = "The target is bitten with viciously sharp fangs. This may also make the target flinch.";
 			targetSystem = 0;
-			attackMethod = 0;
+			attackMethod = AttackMethodEnum.basicAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 45) {
@@ -816,7 +815,7 @@ public class Move : MonoBehaviour {
 			visaName = "Growl";
 			description = "The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stat.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.STATATT,100,-2);
 		}
 		else if (numberID == 46) {
@@ -831,7 +830,7 @@ public class Move : MonoBehaviour {
 			visaName = "Roar";
 			description = "The target is scared off, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.";
 			targetSystem = 0;
-			attackMethod = 7;
+			attackMethod = AttackMethodEnum.forceWithdrawMove;
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
 		}
 		else if (numberID == 47) {
@@ -846,7 +845,7 @@ public class Move : MonoBehaviour {
 			visaName = "Sing";
 			description = "A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.SLEEP,100,2);
 		}
 		else if (numberID == 48) {
@@ -861,7 +860,7 @@ public class Move : MonoBehaviour {
 			visaName = "Supersonic";
 			description = "The user generates odd sound waves from its body that confuse the target.";
 			targetSystem = 0;
-			attackMethod = 5;
+			attackMethod = AttackMethodEnum.targetedStatus;
 			genericUserEffector (go,EffEnum.CONFUSION,100,2);
 		}
 		else if (numberID == 49) {
@@ -876,7 +875,7 @@ public class Move : MonoBehaviour {
 			visaName = "Super Boom";
 			description = "The target is hit with a destructive shock wave that always inflicts 20 HP damage.";
 			targetSystem = 0;
-			attackMethod = 11;
+			attackMethod = AttackMethodEnum.flatAttack;
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 50) {
@@ -992,40 +991,40 @@ public class Move : MonoBehaviour {
 	public void combativeRoundUserToTargetDamage(BasicCombative user,BasicCombative target)
 	{
 		Move.instance.parseMoveByNumber(user.getSelectedMoveID(),1,user);
-		if (attackMethod == 0) {
+		if (attackMethod == AttackMethodEnum.basicAttack) {
 			basicAttack (user, target);
 		} 
-		else if (attackMethod == 1) {
+		else if (attackMethod == AttackMethodEnum.multiAttack) {
 			multiAttack (user, target);
 		}
-		else if (attackMethod == 2) {
+		else if (attackMethod == AttackMethodEnum.doubleAttack) {
 			doubleAttack (user, target);
 		}
-		else if (attackMethod == 3) {
+		else if (attackMethod == AttackMethodEnum.selfStatus) {
 			selfStatus (user);
 		}
-		else if (attackMethod == 4) {
+		else if (attackMethod == AttackMethodEnum.OHKO) {
 			OHKOAttack (user, target);
 		}
-		else if (attackMethod == 5) {
+		else if (attackMethod == AttackMethodEnum.targetedStatus) {
 			targetedStatus (user, target);
 		}
-		else if (attackMethod == 6) {
+		else if (attackMethod == AttackMethodEnum.chargeAttack) {
 			chargeAttack (user, target);
 		}
-		else if (attackMethod == 7) {
+		else if (attackMethod == AttackMethodEnum.forceWithdrawMove) {
 			forceWithdrawStatus (user, target);
 		}
-		else if (attackMethod == 8) {
+		else if (attackMethod == AttackMethodEnum.chargeAttackFirstTurnSelfStatus) {
 			chargeAttackFirstTurnSelfStatus (user, target);
 		}
-		else if (attackMethod == 9) {
+		else if (attackMethod == AttackMethodEnum.jumpkickMissDamage) {
 			jumpAttack (user, target);
 		}
-		else if (attackMethod == 10) {
+		else if (attackMethod == AttackMethodEnum.selfStatusOnConnectAfterAttack) {
 			selfStatusOnConnectAfterAttack (user, target);
 		}
-		else if (attackMethod == 11) {
+		else if (attackMethod == AttackMethodEnum.flatAttack) {
 			flatAttack(user, target);
 		}
 
