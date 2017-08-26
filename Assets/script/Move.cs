@@ -146,7 +146,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Pound";
-			description = "";
+			description = "The target is physically pounded with a long tail, a foreleg, or the like.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -161,7 +161,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Karate Chop";
-			description = "";
+			description = "The target is attacked with a sharp chop. Critical hits land more easily.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.CRITUP1,0,0);
@@ -177,7 +177,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Double Slap";
-			description = "";
+			description = "The target is slapped repeatedly, back and forth, two to five times in a row.";
 			targetSystem = 0;
 			attackMethod = 1;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -194,7 +194,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Comet Punch";
-			description = "";
+			description = "The target is hit with a flurry of punches that strike two to five times in a row.";
 			targetSystem = 0;
 			attackMethod = 1;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -210,7 +210,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Mega Punch";
-			description = "";
+			description = "The target is slugged by a punch thrown with muscle-packed power.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -226,7 +226,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Pay Day";
-			description = "";
+			description = "Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -241,7 +241,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Fire Punch";
-			description = "";
+			description = "The target is punched with a fiery fist. This may also leave the target with a burn.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.BURN,50,1);
@@ -256,7 +256,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Ice Punch";
-			description = "";
+			description = "The target is punched with an icy fist. This may also leave the target frozen.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.FREEZE,50,1);
@@ -271,7 +271,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Thunder Punch";
-			description = "";
+			description = "The target is punched with an electrified fist. This may also leave the target with paralysis.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.PARA,50,1);
@@ -286,7 +286,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Scratch";
-			description = "";
+			description = "Hard, pointed, sharp claws rake the target to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -301,7 +301,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Vice Grip";
-			description = "";
+			description = "The target is gripped and squeezed from both sides to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -316,7 +316,7 @@ public class Move : MonoBehaviour {
 			accuracy = 0;
 			priority = 0;
 			visaName = "Guillotine";
-			description = "";
+			description = "A vicious, tearing attack with big pincers. The target faints instantly if this attack hits.";
 			targetSystem = 0;
 			attackMethod = 4;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -331,7 +331,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Razor Wind";
-			description = "";
+			description = "In this two-turn attack, blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily.";
 			targetSystem = 0;
 			attackMethod = 6;
 			genericUserEffector (go,EffEnum.CRITUP1,0,0);
@@ -346,7 +346,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Swords Dance";
-			description = "";
+			description = "A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat.";
 			targetSystem = 1;
 			attackMethod = 3;
 			genericUserEffector (go,EffEnum.STATATT,100,4);
@@ -361,7 +361,7 @@ public class Move : MonoBehaviour {
 			accuracy = 95;
 			priority = 0;
 			visaName = "Cut";
-			description = "";
+			description = "The target is cut with a scythe or claw.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -376,7 +376,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Gust";
-			description = "";
+			description = "A gust of wind is whipped up by wings and launched at the target to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -391,7 +391,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Wing Attack";
-			description = "";
+			description = "The target is struck with large, imposing wings spread wide to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -406,7 +406,7 @@ public class Move : MonoBehaviour {
 			accuracy = 0;
 			priority = -1;
 			visaName = "Whirlwind";
-			description = "";
+			description = "The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.";
 			targetSystem = 0;
 			attackMethod = 7;
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
@@ -421,7 +421,7 @@ public class Move : MonoBehaviour {
 			accuracy = 95;
 			priority = 0;
 			visaName = "Fly";
-			description = "";
+			description = "The user soars and then strikes its target on the next turn.";
 			targetSystem = 0;
 			attackMethod = 8;
 			genericUserEffector (go,EffEnum.FLIGHT,0,0);
@@ -436,7 +436,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Bind";
-			description = "";
+			description = "Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -451,7 +451,7 @@ public class Move : MonoBehaviour {
 			accuracy = 75;
 			priority = 0;
 			visaName = "Slam";
-			description = "";
+			description = "The target is slammed with a long tail, vines, or the like to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -466,7 +466,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Vine Whip";
-			description = "";
+			description = "The target is struck with slender, whiplike vines to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -481,7 +481,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Stomp";
-			description = "";
+			description = "The target is stomped with a big foot. This may also make the target flinch.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -496,7 +496,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Double Kick";
-			description = "";
+			description = "The target is quickly kicked twice in succession using both feet.";
 			targetSystem = 0;
 			attackMethod = 2;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -511,7 +511,7 @@ public class Move : MonoBehaviour {
 			accuracy = 75;
 			priority = 0;
 			visaName = "Mega Kick";
-			description = "";
+			description = "The target is attacked by a kick launched with muscle-packed power.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -526,7 +526,7 @@ public class Move : MonoBehaviour {
 			accuracy = 95;
 			priority = 0;
 			visaName = "Jump Kick";
-			description = "";
+			description = "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.";
 			targetSystem = 0;
 			attackMethod = 9;
 			genericUserEffector (go,EffEnum.NONE,0,0,EffEnum.CRASHDAMAGEHALF,0,0);
@@ -542,7 +542,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Rolling Kick";
-			description = "";
+			description = "The user lashes out with a quick, spinning kick. This may also make the target flinch.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -557,7 +557,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Sand Attack";
-			description = "";
+			description = "Sand is hurled in the target's face, reducing the target's accuracy.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.STATACC,100,-2);
@@ -572,7 +572,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Headbutt";
-			description = "";
+			description = "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -587,7 +587,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Horn Attack";
-			description = "";
+			description = "The target is jabbed with a sharply pointed horn to inflict damage.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -602,7 +602,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Fury Attack";
-			description = "";
+			description = "The target is jabbed repeatedly with a horn or beak two to five times in a row.";
 			targetSystem = 0;
 			attackMethod = 1;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -617,7 +617,7 @@ public class Move : MonoBehaviour {
 			accuracy = 0;
 			priority = 0;
 			visaName = "Horn Drill";
-			description = "";
+			description = "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.";
 			targetSystem = 0;
 			attackMethod = 4;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -632,7 +632,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Tackle";
-			description = "";
+			description = "A physical attack in which the user charges and slams into the target with its whole body.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -647,7 +647,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Body Slam";
-			description = "";
+			description = "The user drops onto the target with its full body weight. This may also leave the target with paralysis.";
 			targetSystem = 0;
 			attackMethod = 0; 
 			genericUserEffector (go,EffEnum.PARA,75,1);
@@ -662,7 +662,7 @@ public class Move : MonoBehaviour {
 			accuracy = 90;
 			priority = 0;
 			visaName = "Wrap";
-			description = "";
+			description = "A long body, vines, or the like are used to wrap and squeeze the target for four to five turns.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -677,7 +677,7 @@ public class Move : MonoBehaviour {
 			accuracy = 85;
 			priority = 0;
 			visaName = "Take Down";
-			description = "";
+			description = "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.";
 			targetSystem = 0;
 			attackMethod = 10;
 			genericUserEffector (go,EffEnum.RECOILQUARTER,0,0);
@@ -692,7 +692,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Thrash";//TODO code attackMethod and frenzy mechanic
-			description = "";
+			description = "The user rampages and attacks for two to three turns. The user then becomes confused.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -707,7 +707,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Double-Edge";
-			description = "";
+			description = "A reckless, life-risking tackle. This also damages the user quite a lot.";
 			targetSystem = 0;
 			attackMethod = 10;
 			genericUserEffector (go,EffEnum.RECOILTHIRD,0,0);
@@ -722,7 +722,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Tail Whip";
-			description = "";
+			description = "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.STATDEF,100,-2);
@@ -738,7 +738,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Poison Sting";
-			description = "";
+			description = "The user stabs the target with a poisonous stinger. This may also poison the target.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.POISON,100,1);
@@ -753,7 +753,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Twineedle";
-			description = "";
+			description = "The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.";
 			targetSystem = 0;
 			attackMethod = 2;
 			genericUserEffector (go, EffEnum.POISON, 50, 1);
@@ -768,7 +768,7 @@ public class Move : MonoBehaviour {
 			accuracy = 95;
 			priority = 0;
 			visaName = "Pin Missile";
-			description = "";
+			description = "Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.";
 			targetSystem = 0;
 			attackMethod = 1;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -783,7 +783,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Leer";
-			description = "";
+			description = "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.STATDEF,100,-2);
@@ -798,7 +798,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Bite";
-			description = "";
+			description = "The target is bitten with viciously sharp fangs. This may also make the target flinch.";
 			targetSystem = 0;
 			attackMethod = 0;
 			genericUserEffector (go,EffEnum.NONE,0,0);
@@ -813,7 +813,7 @@ public class Move : MonoBehaviour {
 			accuracy = 100;
 			priority = 0;
 			visaName = "Growl";
-			description = "";
+			description = "The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stat.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.STATATT,100,-2);
@@ -828,7 +828,7 @@ public class Move : MonoBehaviour {
 			accuracy = 0;
 			priority = -1;
 			visaName = "Roar";
-			description = "";
+			description = "The target is scared off, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.";
 			targetSystem = 0;
 			attackMethod = 7;
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
@@ -843,7 +843,7 @@ public class Move : MonoBehaviour {
 			accuracy = 55;
 			priority = 0;
 			visaName = "Sing";
-			description = "";
+			description = "A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.SLEEP,100,2);
@@ -858,7 +858,7 @@ public class Move : MonoBehaviour {
 			accuracy = 55;
 			priority = 0;
 			visaName = "Supersonic";
-			description = "";
+			description = "The user generates odd sound waves from its body that confuse the target.";
 			targetSystem = 0;
 			attackMethod = 5;
 			genericUserEffector (go,EffEnum.CONFUSION,100,2);
@@ -873,7 +873,7 @@ public class Move : MonoBehaviour {
 			accuracy = 90;
 			priority = 0;
 			visaName = "Super Boom";
-			description = "";
+			description = "The target is hit with a destructive shock wave that always inflicts 20 HP damage.";
 			targetSystem = 0;
 			attackMethod = 11;
 			genericUserEffector (go,EffEnum.NONE,0,0);
