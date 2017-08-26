@@ -12,7 +12,7 @@ public class Move : MonoBehaviour {
 	public Text battleText;
 	public int moveID;
 
-	private int type;
+	private TypeEnum type;
 	/// <summary>
 	/// 1=physical
 	/// 2=special
@@ -115,7 +115,7 @@ public class Move : MonoBehaviour {
 	/// </summary>
 	public void cleanMoveInfo()
 	{
-		type = 0;
+		type = TypeEnum.typeless;
 		catagory = 1;
 		pp = 1;
 		powerGreen = 0;
@@ -137,7 +137,7 @@ public class Move : MonoBehaviour {
 		cleanMoveInfo ();
 		moveID = numberID;
 		if (numberID == 1) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 35;
 			powerGreen = 40;
@@ -152,7 +152,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 2) {
-			type = 7;
+			type = TypeEnum.fighting;
 			catagory = 1;
 			pp = 25;
 			powerGreen = 50;
@@ -168,7 +168,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 3) {
 			//print ("Double Slap");
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 15;
 			powerGreen = 15;
@@ -185,7 +185,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 4) {
 			//print ("Comet Punch");
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 15;
 			powerGreen = 18;
@@ -201,7 +201,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 5) {
 			//print ("Mega Punch");
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 20;
 			powerGreen = 80;
@@ -217,7 +217,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 6) {
 			//TODO incorperate pay day effect
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 20;
 			powerGreen = 40;
@@ -232,7 +232,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 7) {
-			type = 2;
+			type = TypeEnum.fire;
 			catagory = 1;
 			pp = 15;
 			powerGreen = 75;
@@ -247,7 +247,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.BURN,50,1);
 		}
 		else if (numberID == 8) {
-			type = 1;
+			type = TypeEnum.ice;
 			catagory = 1;
 			pp = 15;
 			powerGreen = 75;
@@ -262,7 +262,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.FREEZE,50,1);
 		}
 		else if (numberID == 9) {
-			type = 1;
+			type = TypeEnum.electric;
 			catagory = 1;
 			pp = 15;
 			powerGreen = 75;
@@ -277,7 +277,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.PARA,50,1);
 		}
 		else if (numberID == 10) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 35;
 			powerGreen = 40;
@@ -292,7 +292,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 11) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 30;
 			powerGreen = 55;
@@ -307,7 +307,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 12) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 5;
 			powerGreen = 0;
@@ -322,7 +322,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 13) { 
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 2;
 			pp = 10;
 			powerGreen = 80;
@@ -337,7 +337,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.CRITUP1,0,0);
 		}
 		else if (numberID == 14) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 3;
 			pp = 20;
 			powerGreen = 0;
@@ -352,7 +352,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.STATATT,100,4);
 		}
 		else if (numberID == 15) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =30;
 			powerGreen = 50;
@@ -367,7 +367,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 16) {
-			type = 1;
+			type = TypeEnum.flying;
 			catagory = 2;
 			pp =35;
 			powerGreen = 40;
@@ -382,7 +382,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 17) {
-			type = 1;
+			type = TypeEnum.flying;
 			catagory = 1;
 			pp =35;
 			powerGreen = 60;
@@ -397,7 +397,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 18) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 3;
 			pp =20;
 			powerGreen = 0;
@@ -412,7 +412,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
 		}
 		else if (numberID == 19) {
-			type = 1;
+			type = TypeEnum.flying;
 			catagory = 1;
 			pp =15;
 			powerGreen = 90;
@@ -427,7 +427,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.FLIGHT,0,0);
 		}
 		else if (numberID == 20) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 15;
@@ -442,7 +442,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 21) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 80;
@@ -457,7 +457,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 22) {
-			type = 1;
+			type = TypeEnum.grass;
 			catagory = 1;
 			pp =25;
 			powerGreen = 45;
@@ -472,7 +472,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 23) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 65;
@@ -487,7 +487,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 24) {
-			type = 7;
+			type = TypeEnum.fighting;
 			catagory = 1;
 			pp =30;
 			powerGreen = 30;
@@ -502,7 +502,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 25) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =5;
 			powerGreen = 120;
@@ -517,7 +517,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 26) {
-			type = 1;
+			type = TypeEnum.fighting;
 			catagory = 1;
 			pp =10;
 			powerGreen = 100;
@@ -533,7 +533,7 @@ public class Move : MonoBehaviour {
 			secondEffect = true;
 		}
 		else if (numberID == 27) {
-			type = 1;
+			type = TypeEnum.fighting;
 			catagory = 1;
 			pp =15;
 			powerGreen = 60;
@@ -548,7 +548,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 28) {
-			type = 1;
+			type = TypeEnum.ground;
 			catagory = 1;
 			pp =15;
 			powerGreen = 0;
@@ -563,7 +563,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.STATACC,100,-2);
 		}
 		else if (numberID == 29) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =15;
 			powerGreen = 70;
@@ -578,7 +578,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 30) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =25;
 			powerGreen = 65;
@@ -593,7 +593,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 31) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 15;
@@ -608,7 +608,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 32) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp = 5;
 			powerGreen = 0;
@@ -623,7 +623,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 33) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =35;
 			powerGreen = 40;
@@ -638,7 +638,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 34) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =15;
 			powerGreen = 85;
@@ -653,7 +653,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.PARA,75,1);
 		}
 		else if (numberID == 35) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 15;
@@ -668,7 +668,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 36) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 90;
@@ -679,11 +679,11 @@ public class Move : MonoBehaviour {
 			visaName = "Take Down";
 			description = "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.";
 			targetSystem = 0;
-			attackMethod = 10;
+			attackMethod = AttackMethodEnum.selfStatusOnConnectAfterAttack;
 			genericUserEffector (go,EffEnum.RECOILQUARTER,0,0);
 		}
 		else if (numberID == 37) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =10;
 			powerGreen = 120;
@@ -698,7 +698,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 38) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =15;
 			powerGreen = 120;
@@ -713,7 +713,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.RECOILTHIRD,0,0);
 		}
 		else if (numberID == 39) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =30;
 			powerGreen = 0;
@@ -729,7 +729,7 @@ public class Move : MonoBehaviour {
 
 		}
 		else if (numberID == 40) {
-			type = 8;
+			type = TypeEnum.poison;
 			catagory = 1;
 			pp =35;
 			powerGreen = 15;
@@ -744,7 +744,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.POISON,100,1);
 		}
 		else if (numberID == 41) {
-			type = 12;
+			type = TypeEnum.bug;
 			catagory = 1;
 			pp =30;
 			powerGreen = 25;
@@ -759,7 +759,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go, EffEnum.POISON, 50, 1);
 		}
 		else if (numberID == 42) {
-			type = 12;
+			type = TypeEnum.bug;
 			catagory = 1;
 			pp =20;
 			powerGreen = 25;
@@ -774,7 +774,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 43) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =30;
 			powerGreen = 0;
@@ -789,7 +789,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.STATDEF,100,-2);
 		}
 		else if (numberID == 44) {
-			type = 16;
+			type = TypeEnum.dark;
 			catagory = 1;
 			pp =25;
 			powerGreen = 65;
@@ -804,7 +804,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.NONE,0,0);
 		}
 		else if (numberID == 45) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =40;
 			powerGreen = 0;
@@ -819,7 +819,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.STATATT,100,-2);
 		}
 		else if (numberID == 46) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 3;
 			pp =20;
 			powerGreen = 0;
@@ -834,7 +834,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.RANDOMWITHDRAW,0,0);
 		}
 		else if (numberID == 47) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =15;
 			powerGreen = 0;
@@ -849,7 +849,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.SLEEP,100,2);
 		}
 		else if (numberID == 48) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 0;
@@ -864,7 +864,7 @@ public class Move : MonoBehaviour {
 			genericUserEffector (go,EffEnum.CONFUSION,100,2);
 		}
 		else if (numberID == 49) {
-			type = 1;
+			type = TypeEnum.normal;
 			catagory = 1;
 			pp =20;
 			powerGreen = 20;
@@ -1499,11 +1499,11 @@ public class Move : MonoBehaviour {
 	/// <returns>The move effectiveness.</returns>
 	/// <param name="type1">Type1.</param>
 	/// <param name="type2">Type2.</param>
-	public float calculateMoveEffectiveness(int type1,int type2)
+	public float calculateMoveEffectiveness(TypeEnum type1,TypeEnum type2)
 	{
 		float modifier = 1.0f;
-		modifier *= typeEffectiveness (Move.instance.getType(),type1);
-		modifier *= typeEffectiveness (Move.instance.getType(),type2);
+		modifier *= TypeEffect.typeEffectiveness (Move.instance.getType(),type1);
+		modifier *= TypeEffect.typeEffectiveness (Move.instance.getType(),type2);
 
 		return modifier;
 	}
