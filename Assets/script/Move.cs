@@ -18,7 +18,7 @@ public class Move : MonoBehaviour {
 	/// 2=special
 	/// 3=status
 	/// </summary>
-	private int catagory;
+	private CategoryEnum catagory;
 	private int pp;
 	private int powerGreen;
 	private int powerGray;
@@ -116,7 +116,7 @@ public class Move : MonoBehaviour {
 	public void cleanMoveInfo()
 	{
 		type = TypeEnum.typeless;
-		catagory = 1;
+		catagory = CategoryEnum.physical;
 		pp = 1;
 		powerGreen = 0;
 		powerGray = 0;
@@ -138,7 +138,7 @@ public class Move : MonoBehaviour {
 		moveID = numberID;
 		if (numberID == 1) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 35;
 			powerGreen = 40;
 			powerGray = 30;
@@ -153,7 +153,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 2) {
 			type = TypeEnum.fighting;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 25;
 			powerGreen = 50;
 			powerGray = 25;
@@ -169,7 +169,7 @@ public class Move : MonoBehaviour {
 		else if (numberID == 3) {
 			//print ("Double Slap");
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 15;
 			powerGreen = 15;
 			powerGray = 7;
@@ -186,7 +186,7 @@ public class Move : MonoBehaviour {
 		else if (numberID == 4) {
 			//print ("Comet Punch");
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 15;
 			powerGreen = 18;
 			powerGray = 10;
@@ -202,7 +202,7 @@ public class Move : MonoBehaviour {
 		else if (numberID == 5) {
 			//print ("Mega Punch");
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 20;
 			powerGreen = 80;
 			powerGray = 70;
@@ -218,7 +218,7 @@ public class Move : MonoBehaviour {
 		else if (numberID == 6) {
 			//TODO incorperate pay day effect
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 20;
 			powerGreen = 40;
 			powerGray = 40;
@@ -233,7 +233,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 7) {
 			type = TypeEnum.fire;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 15;
 			powerGreen = 75;
 			powerGray = 75;
@@ -248,7 +248,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 8) {
 			type = TypeEnum.ice;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 15;
 			powerGreen = 75;
 			powerGray = 75;
@@ -263,7 +263,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 9) {
 			type = TypeEnum.electric;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 15;
 			powerGreen = 75;
 			powerGray = 75;
@@ -278,7 +278,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 10) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 35;
 			powerGreen = 40;
 			powerGray = 40;
@@ -293,7 +293,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 11) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 30;
 			powerGreen = 55;
 			powerGray = 55;
@@ -308,7 +308,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 12) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 5;
 			powerGreen = 0;
 			powerGray = 0;
@@ -323,7 +323,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 13) { 
 			type = TypeEnum.normal;
-			catagory = 2;
+			catagory = CategoryEnum.special;
 			pp = 10;
 			powerGreen = 80;
 			powerGray = 80;
@@ -338,7 +338,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 14) {
 			type = TypeEnum.normal;
-			catagory = 3;
+			catagory = CategoryEnum.status;
 			pp = 20;
 			powerGreen = 0;
 			powerGray = 0;
@@ -353,7 +353,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 15) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =30;
 			powerGreen = 50;
 			powerGray = 50;
@@ -368,7 +368,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 16) {
 			type = TypeEnum.flying;
-			catagory = 2;
+			catagory = CategoryEnum.special;
 			pp =35;
 			powerGreen = 40;
 			powerGray = 40;
@@ -383,7 +383,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 17) {
 			type = TypeEnum.flying;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =35;
 			powerGreen = 60;
 			powerGray = 60;
@@ -398,7 +398,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 18) {
 			type = TypeEnum.normal;
-			catagory = 3;
+			catagory = CategoryEnum.status;
 			pp =20;
 			powerGreen = 0;
 			powerGray = 0;
@@ -413,7 +413,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 19) {
 			type = TypeEnum.flying;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =15;
 			powerGreen = 90;
 			powerGray = 90;
@@ -428,7 +428,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 20) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 15;
 			powerGray = 15;
@@ -443,7 +443,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 21) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 80;
 			powerGray = 80;
@@ -458,7 +458,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 22) {
 			type = TypeEnum.grass;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =25;
 			powerGreen = 45;
 			powerGray = 45;
@@ -473,7 +473,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 23) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 65;
 			powerGray = 65;
@@ -488,7 +488,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 24) {
 			type = TypeEnum.fighting;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =30;
 			powerGreen = 30;
 			powerGray = 15;
@@ -503,7 +503,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 25) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =5;
 			powerGreen = 120;
 			powerGray = 120;
@@ -518,7 +518,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 26) {
 			type = TypeEnum.fighting;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =10;
 			powerGreen = 100;
 			powerGray = 50;
@@ -534,7 +534,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 27) {
 			type = TypeEnum.fighting;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =15;
 			powerGreen = 60;
 			powerGray = 30;
@@ -549,7 +549,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 28) {
 			type = TypeEnum.ground;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =15;
 			powerGreen = 0;
 			powerGray = 0;
@@ -564,7 +564,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 29) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =15;
 			powerGreen = 70;
 			powerGray = 70;
@@ -579,7 +579,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 30) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =25;
 			powerGreen = 65;
 			powerGray = 65;
@@ -594,7 +594,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 31) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 15;
 			powerGray =15 ;
@@ -609,7 +609,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 32) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp = 5;
 			powerGreen = 0;
 			powerGray = 0;
@@ -624,7 +624,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 33) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =35;
 			powerGreen = 40;
 			powerGray = 40;
@@ -639,7 +639,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 34) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =15;
 			powerGreen = 85;
 			powerGray = 85;
@@ -654,7 +654,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 35) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 15;
 			powerGray = 15;
@@ -669,7 +669,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 36) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 90;
 			powerGray = 90;
@@ -684,7 +684,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 37) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =10;
 			powerGreen = 120;
 			powerGray = 120;
@@ -699,7 +699,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 38) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =15;
 			powerGreen = 120;
 			powerGray = 120;
@@ -714,7 +714,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 39) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =30;
 			powerGreen = 0;
 			powerGray = 0;
@@ -730,7 +730,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 40) {
 			type = TypeEnum.poison;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =35;
 			powerGreen = 15;
 			powerGray = 15;
@@ -745,7 +745,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 41) {
 			type = TypeEnum.bug;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =30;
 			powerGreen = 25;
 			powerGray = 25;
@@ -760,7 +760,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 42) {
 			type = TypeEnum.bug;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =20;
 			powerGreen = 25;
 			powerGray =25 ;
@@ -775,7 +775,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 43) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =30;
 			powerGreen = 0;
 			powerGray = 0;
@@ -790,7 +790,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 44) {
 			type = TypeEnum.dark;
-			catagory = 1;
+			catagory = CategoryEnum.physical;
 			pp =25;
 			powerGreen = 65;
 			powerGray = 65;
@@ -805,7 +805,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 45) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =40;
 			powerGreen = 0;
 			powerGray = 0;
@@ -820,7 +820,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 46) {
 			type = TypeEnum.normal;
-			catagory = 3;
+			catagory = CategoryEnum.status;
 			pp =20;
 			powerGreen = 0;
 			powerGray = 0;
@@ -835,7 +835,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 47) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =15;
 			powerGreen = 0;
 			powerGray = 0;
@@ -850,7 +850,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 48) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.status;
 			pp =20;
 			powerGreen = 0;
 			powerGray = 0;
@@ -865,7 +865,7 @@ public class Move : MonoBehaviour {
 		}
 		else if (numberID == 49) {
 			type = TypeEnum.normal;
-			catagory = 1;
+			catagory = CategoryEnum.special;
 			pp =20;
 			powerGreen = 20;
 			powerGray = 20;
@@ -1263,10 +1263,10 @@ public class Move : MonoBehaviour {
 	public void attack(BasicCombative user,BasicCombative target,float modifier)
 	{
 
-		if (catagory == 1) {
+		if (catagory == CategoryEnum.physical) {
 			physicalDamage (user, target, modifier);
 		}
-		else if (catagory == 2) {
+		else if (catagory == CategoryEnum.special) {
 			specialDamage(user, target, modifier);
 		}
 
@@ -1281,10 +1281,10 @@ public class Move : MonoBehaviour {
 	public void attack(BasicCombative user,BasicCombative target)
 	{
 
-		if (catagory == 1) {
+		if (catagory == CategoryEnum.physical) {
 			physicalDamage (user, target, 1.0f);
 		}
-		else if (catagory == 2) {
+		else if (catagory == CategoryEnum.special) {
 			specialDamage(user, target, 1.0f);
 		}
 
@@ -1719,7 +1719,7 @@ public class Move : MonoBehaviour {
 		return type;
 	}
 
-	public int getCatagory()
+	public CategoryEnum getCatagory()
 	{
 		return catagory;
 	}
