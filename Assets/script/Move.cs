@@ -1714,7 +1714,7 @@ public class Move : MonoBehaviour {
 		return 0;
 	}
 
-	public int getType()
+	public TypeEnum getType()
 	{
 		return type;
 	}

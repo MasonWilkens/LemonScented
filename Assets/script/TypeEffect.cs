@@ -47,7 +47,7 @@ public class TypeEffect{
 	 * 0=typeless
 	*/
 
-	public float typeEffectiveness(TypeEnum attType,TypeEnum defType)
+	public static float typeEffectiveness(TypeEnum attType,TypeEnum defType)
 	{
 		if (attType == TypeEnum.normal) {
 			if (defType == TypeEnum.rock) {return 0.5f;} 
