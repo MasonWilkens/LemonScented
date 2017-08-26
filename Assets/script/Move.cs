@@ -134,6 +134,7 @@ public class Move : MonoBehaviour {
 
 	public void parseMoveByNumber(int numberID,int varient,BasicCombative go)
 	{
+
 		cleanMoveInfo ();
 		moveID = numberID;
 		if (numberID == 1) {
@@ -951,6 +952,16 @@ public class Move : MonoBehaviour {
 		return;
 	}
 
+	/// <summary>
+	/// Sets generic effector
+	/// </summary>
+	/// <param name="go">Go.</param>
+	/// <param name="additionalEffect">Additional effect.</param>
+	/// <param name="percentForEffect">Percent for effect.</param>
+	/// <param name="magnitudeOfEffect">Magnitude of effect.</param>
+	/// <param name="additionalSecondEffect">Additional second effect.</param>
+	/// <param name="percentForSecondEffect">Percent for second effect.</param>
+	/// <param name="magnitudeOfSecondEffect">Magnitude of second effect.</param>
 	private void genericUserEffector(BasicCombative go,EffEnum additionalEffect,int percentForEffect,int magnitudeOfEffect,EffEnum additionalSecondEffect,int percentForSecondEffect,int magnitudeOfSecondEffect)
 	{
 		this.additionalEffect = additionalEffect;
@@ -1039,7 +1050,7 @@ public class Move : MonoBehaviour {
 	/// <param name="user">User.</param>
 	/// <param name="target">Target.</param>
 	public void basicAttack(BasicCombative user,BasicCombative target){
-		
+
 		if (accuracyCheck (Move.instance.getAccuracy (),user.getAccMod()/target.getEvdMod(),target) == 0) {
 			attack (user,target,getModifiers(user,target));
 			effectPlacement (getModifiers(user,target),target,100.0f);
@@ -1760,7 +1771,3 @@ public class Move : MonoBehaviour {
 
 
 }
-/*
-public enum AdditionEffect{NONE,BURN,PARA,FREEZE,POISON,SLEEP,CONFUSION,STATATT,STATDEF,STATSPATT
-,STATSPDEF,STATSPEED,STATALL,STATACC,STATEVASION,FLINCH,CRITUP1,CRITUPx2,RANDOMWITHDRAW,RECOILTHIRD,RECOILQUARTER
-,FLIGHT};*/
