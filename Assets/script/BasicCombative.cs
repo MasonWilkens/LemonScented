@@ -47,8 +47,8 @@ public class BasicCombative : MonoBehaviour {
 	public int move4;
 	public int move5;
 
-	public int type1;
-	public int type2;
+	public TypeEnum type1;
+	public TypeEnum type2;
 
 	public bool isSwitchingOut;
 	public int switchingNumber;
